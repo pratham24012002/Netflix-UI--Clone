@@ -1,0 +1,303 @@
+@import url('https://fonts.googleapis.com/css2?family=Martel+Sans:wght@200;300;400;600;700;800;900&family=Montserrat:wght@600&display=swap');
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family:"Martel Sans", sans-serif;
+}
+
+body{
+    background-color: black;
+}
+
+.main{
+    background-image: url("./images/bg.jpeg");
+    background-position: center center;
+    background-size: max(1200px, 100vw);
+    background-repeat: no-repeat;
+    height: 644px;
+    position: relative;
+}
+
+.bg-img{
+    width: 110px;
+}
+
+nav{
+    height: 80px;
+    position: relative;
+    z-index: 10;
+}
+
+.heading-area{
+    font-family: 'Martel Sans', sans-serif;
+    height: calc(100% - 60px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    color: white;
+    position: relative; 
+    padding: 0 30px;
+}
+
+.main .box{
+    height: 644px;
+    width: 100%;
+    opacity: 0.69;
+    position: absolute;
+    top: 0;
+    background-color: black;
+}
+
+.heading-area h1{
+    font-size: 3rem;
+    font-weight: 900;
+    margin-bottom: 0px;
+}
+
+.heading-area p{
+    font-size: 1.5rem;
+    font-weight: 400;
+}
+
+.heading-area h3{
+    font-size: 1.25rem;
+    font-weight: 400;
+}
+
+
+.heading-area button{
+    padding: 15px 25px !important;
+    line-height: 27px
+}
+.sepration{
+    height: 5px;
+    background-color: gray;
+    margin-bottom: 64px;
+}
+
+section img{
+    width: 100%;
+}
+
+section video{
+    width: 100%;
+    height: 100%;
+    max-width: 73%;
+    max-height: 54%;
+    position: absolute;
+    top: 20%;
+    left: 13%;
+    z-index: -1;
+}
+
+section.feature-section:nth-of-type(3) video{
+    z-index: -1; 
+    overflow: hidden;
+     width: 100%; 
+    height: 100%;
+     max-width: 63%; 
+     max-height: 47%; 
+     position: absolute;
+     top: 32%; 
+     left: 50%; 
+     -webkit-transform: translate(-50%, -50%);
+     transform: translate(-50%, -50%);
+}
+
+.faq .accordion{
+    --bs-accordion-border-color: none
+}
+
+.faq button {
+    font-size: 1.3rem;
+}
+
+.faq .accordion-button{
+    background-color: rgb(45, 45, 45);
+    color: white;
+    padding: 1.5rem;
+}
+
+.faq .accordion-body{
+ background-color: rgb(45, 45, 45);
+ color: white;
+
+ }
+
+ .faq .accordion-button.collapsed::after{
+    background-image: url("./images/open.svg");
+    color: white;
+    transform: none;
+    transition: none;
+ }
+
+ .faq .accordion-button::after{
+    background-image: url("./images/close.svg"); 
+    transform: none;
+    transition: none;  
+}
+
+ .faq .accordion-collapse{
+    margin-top: 3px;
+ }
+
+ .faq .accordion-item{
+    background-color: black
+ }
+
+.faq .accordion-button:focus{
+    box-shadow: none
+}
+
+/* footer section */
+
+footer p,a,.country{
+    color: rgba(255, 255, 255, 0.7);
+}
+
+.select-language{
+    margin-bottom: 25px;
+}
+
+.language-option{
+    background-color: black;
+    color: white;
+    border-radius: 5px;
+    padding: 2px 20px;
+    width: 130px;
+}
+
+/* utility classes */
+
+.color-white{
+    color: white;
+}
+
+.pb-70{
+    padding-bottom: 70px;
+}
+
+.mt-50{
+    margin-top: 50px;
+}
+
+.btn-red{
+    background-color: #e50914;
+    color: white;
+    padding: 5px 20px;
+    border: none;
+    border-radius: 4px;
+    margin-left: 10px;
+}
+.register{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 65px;
+}
+
+.register .input-area{
+    width: 370px;
+}
+
+.input-area .form-control{
+    background-color: black;
+    border: 1px solid gray;
+    border-radius: 5px;
+}
+
+.input-area>label{
+    color:rgba(255, 255, 255, 0.7) ;
+}
+
+.form-floating>.form-control:focus~label{
+    color:rgba(255, 255, 255, 0.7)
+}
+
+.register button{
+    background-color: #e50914;
+    font-weight: bold;
+    padding: 12px 25px;
+    border: none;
+}
+
+.submit{
+    position: relative;
+    left: 5px;
+}
+.submit .btn:hover{
+    background-color: #e50914;
+    border: none;
+}
+
+.pd-2{
+    padding: 2px 0px;
+}
+
+/* media query */
+
+
+@media(max-width:992px){
+     .feature{
+        text-align: center;
+    }
+    .feature-section .row{
+        padding: 0px 20px;
+    }
+
+    .heading-area h1{
+        font-size: 2rem;
+    }
+    .order2{
+        order: 2;
+    }
+    .mb-30{
+        margin-bottom: 30px;
+    }
+}
+
+@media (max-width:769px){
+    .register .input-area{
+        width: 50%;
+    }
+}
+
+@media (max-width:576px){
+    .register .input-area{
+        width: 100%;
+    }
+
+    .register{
+        display: block;
+        width: 100%;
+    }
+
+    .input-area{
+        margin-bottom: 20px;
+    }
+    .submit{
+        text-align: center;
+    }
+}
+
+@media(max-width:576px){
+    .main select{
+        padding: 1px 1px ;
+        width: 85px;
+    }
+}
+
+@media(max-width:330px){
+    .heading-area h1{
+        font-size: 1.5rem;
+    }
+    .main nav{
+       display: inline-block !important;
+       padding-top: 1.5rem;
+       padding-bottom: 1.5rem;
+       margin: auto;
+    }
+}
